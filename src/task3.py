@@ -9,27 +9,25 @@ class Animal:
         print(f"{self.name} is sleeping.")
 
 
-def bark():
-    print("Woof!")
-
-
 class Dog(Animal):
     def __init__(self, name, breed):
         super().__init__(name)
         self.breed = breed
 
+    def bark(self):
+        print("Woof!")
+
     def run(self):
         print(f"{self.name} is running.")
-
-
-def meow():
-    print("Meow!")
 
 
 class Cat(Animal):
     def __init__(self, name, color):
         super().__init__(name)
         self.color = color
+
+    def meow(self):
+        print("Meow!")
 
     def walk(self):
         print(f"{self.name} is walking.")
@@ -39,6 +37,5 @@ class Cat(Animal):
 dog = Dog("Bobby", "Bulldog")
 cat = Cat("Becky", "Black")
 
-bark()
+dog.bark()
 cat.walk()
-
